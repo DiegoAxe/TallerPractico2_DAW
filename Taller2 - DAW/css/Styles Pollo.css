@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto:wght@300&display=swap');
+*{
+    color: black
+}
+
+table,th,td{
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+body{
+    margin-bottom: 50px;
+    background-color: #F2F3F4;
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    font-family: 'Bungee Spice', cursive;
+    text-align: center;
+}
+
+section{
+    background-color: #D0D3D4;
+    padding: 10px;
+}
+#facturaVisible{
+    display: none;
+}
+
+table{
+    border: gray 0.5px solid;
+}
+
+#SubActual{
+    padding: 5px;
+    position: fixed;
+    background-color: green;
+    right: 0;
+    margin-top: 10vh;
+    color: white;
+
+}
+table td{
+    width: 100px;
+    text-align: center;
+    
+}

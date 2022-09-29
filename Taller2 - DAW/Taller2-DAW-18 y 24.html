@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Styles Pollo.css" />
+    <title>Don Pollo Salesiano</title>
+</head>
+<body>
+
+   
+    <span id="SubActual"></span>
+    <h1> Don Pollo Salesiano, el pollo favorito de Don Bosco!</h1>
+    <section id="ordenar">
+        <article id="combo">
+            <h2> Elija su combo por favor:</h2>
+            <label>Cual combo desea?</label>
+            <select id="comboElegido" name="combito">
+                <option value="super_combo" selected> Super Combo - $7.25</option>
+                <option value="combo_personal"> Combo Personal - $5.75</option>
+                <option value="combo_infantil"> Combo Infantil - $3.50</option>
+            </select>
+            <label>Cuantos de estos combos desea?</label>
+            <input id="cantiCombito" type="number" min="1" value="1">
+            <br>
+            <div id="info_combo">
+                <!-- Espacio para la descripcion del combo -->
+            </div>
+        </article>
+        <br>
+        <article id="extras">
+            <h2> Tambien puede elegir unos acompañantes:</h2>
+            
+            <table id="acompañantes">
+                <tr>
+                    <th>#</th> <th>Acompañante</th> <th>Precio</th> <th>¿Añadir?</th> <th> Cantidad</th> 
+                </tr>
+                <tr>
+                    <td>#1</td> <td>Ensalada</td> <td>$1.50</td> <td> <input type="checkbox" id="check1" value="Ensalada" name="Ens"> </td> <td><input id="canti1" class="Cantidadessss"  type="number" value="1" min="1"></td>
+                </tr>
+                <tr>
+                    <td>#2</td> <td>Papa Frita</td> <td>$1.25</td> <td> <input type="checkbox" id="check2" value="PapaFrita" name="PPFritas"> </td> <td><input id="canti2" class="Cantidadessss" type="number" value="1" min="1"></td>
+                </tr>
+                <tr>
+                    <td>#3</td> <td>Pieza de Pollo Grande</td> <td>$1.75</td> <td> <input type="checkbox" id="check3" value="PolloGrande" name="PGrande"> </td> <td><input id="canti3" class="Cantidadessss" type="number" value="1" min="1"></td>
+                </tr>
+                <tr>
+                    <td>#4</td> <td>Pieza de Pollo Mediana</td> <td>$1.50</td> <td> <input type="checkbox" id="check4" value="PolloMediana" name="PMediana" name="Ens"> </td> <td><input id="canti4" value="1" class="Cantidadessss" type="number" min="1"></td>
+                </tr>
+                <tr>
+                    <td>#5</td> <td>Pieza de Pollo Pequeña</td> <td>$1.25</td> <td> <input type="checkbox" id="check5" value="PolloPequena" name="PPequena"> </td> <td><input id="canti5" value="1" class="Cantidadessss" type="number" min="1"></td>
+                </tr>
+                <tr>
+                    <td>#6</td> <td>Bebida Grande</td> <td>$1.50</td> <td> <input type="checkbox" id="check6" value="BebidaGrande" name="BGrande"> </td> <td><input id="canti6" value="1" class="Cantidadessss" type="number" min="1"></td>
+                </tr>
+                <tr>
+                    <td>#7</td> <td>Bebida Mediana</td> <td>$1.25</td> <td> <input type="checkbox" id="check7" value="BebidaMediana" name="BMediana"> </td> <td><input id="canti7"  value="1" class="Cantidadessss" type="number" min="1"></td>
+                </tr>
+                <tr>
+                    <td>#8</td> <td>Bebida Pequeña</td> <td>$1.00</td> <td> <input type="checkbox" id="check8" value="BebidaPequena" name="BPequena"> </td> <td><input id="canti8" value="1" class="Cantidadessss" type="number" min="1"></td>
+                </tr>
+                <tr>
+                    <td>#9</td> <td>Cafe</td> <td>$0.50</td> <td> <input type="checkbox" id="check9" value="Cafe" name="Caf"> </td> <td><input id="canti9" class="Cantidadessss" type="number" value="1" min="1"></td>
+                </tr>
+                <tr>
+                    <td>#10</td> <td>Postre</td> <td>$1.25</td> <td> <input type="checkbox" id="check10" value="Postre" name="Post"> </td> <td><input id="canti10" class="Cantidadessss" type="number" value="1" min="1"></td>
+                </tr>
+            </table>
+            <button type="button" id="AgregarExtras"> Agregar a la compra </button>
+        </article>
+    </section> 
+    <br>
+    <br>
+    <section id="Recibo">
+        <h2> Está es la factura de su compra:</h2>
+        <button type="button" id="FacturaFinal">  Generar su Factura </button>
+        <div id="facturaVisible">
+            <table id="table_Recibo">
+                <tr>
+                    <th>#</th><th>Producto</th><th>Cantidad</th><th>Precio Individual</th><th>Subtotal</th>
+                </tr>
+                <tr>
+                    <!-- Este patron se repetiria para los demás productos -->
+                    <td>#1</td> 
+                    <td id="descCombo"> <!-- Espacio para el nombre del combo -->  </td>
+                    <td id="cantCombo"> <!-- Espacio para la cantidad del combo --> </td>
+                    <td id="precCombo"> <!-- Espacio para el precio del combo --> </td> 
+                    <td id="subCombo"> <!-- Espacio para el subtotal del combo --></td>
+                </tr>
+            </table>
+            <table id="listar_acompañantes">
+
+            </table>
+            <table>
+                <tr id="totales">
+                    <th colspan="4">Total:</th> <td id="TotalFinal"> <!-- Espacio para el resultado final --></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <br>
+    <br>
+    <section id="Comentarios">
+        <h2> ¿Desea comentarnos algo? </h2>
+        <input type="submit" value="Haz un comentario" id="Comentar">
+        <h3>Pues ya tiene a su disposición nuestro nuevo sistema de comentarios:</h3>
+        <div class="Comment_text">
+            <form>
+                <br>
+                <textarea name="Comentarios" id="text_com" cols="40" rows="10" disabled="true"
+                    placeholder="Escribenos tus sugerencias o comentarios de tu orden, estamos para escucharte"></textarea>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </section>
+</body>
+<script src="js/Ordenar.js"></script>
+</html>
